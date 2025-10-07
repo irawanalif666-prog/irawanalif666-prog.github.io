@@ -1,1 +1,236 @@
-Hallo world
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMKS Islam Malahayati</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #a0e7e5, #b4f8c8, #fefefe);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #00b4d8, #90e0ef);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 5px;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      background: #0077b6;
+      height: 4px;
+      margin: 5px 0;
+      border-radius: 2px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #caf0f8;
+      padding: 20px;
+      transition: left 0.3s ease;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 10px 0;
+      color: #023e8a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .testimoni {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .testimoni .card {
+      border-left: 5px solid #00b4d8;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background: #00b4d8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0077b6;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .sidebar {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="menu-toggle" onclick="toggleSidebar()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <a href="#profil">Profil Sekolah</a>
+    <a href="#visi">Visi & Misi</a>
+    <a href="#program">Program Sekolah</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+
+  <header>
+    <h1>SMKS ISLAM MALAHAYATI</h1>
+    <p>Yayasan Bina Bersama Indomas</p>
+  </header>
+
+  <section id="profil">
+    <div class="card">
+      <h2>Profil Sekolah</h2>
+      <p>SMKS Islam Malahayati adalah sekolah menengah kejuruan yang berkomitmen mencetak generasi islami, profesional, dan siap kerja. Terletak di lingkungan yang kondusif, kami mengedepankan pendidikan karakter dan keterampilan.</p>
+    </div>
+  </section>
+
+  <section id="visi">
+    <div class="card">
+      <h2>Visi & Misi</h2>
+      <p><strong>Visi:</strong> Menjadi SMK unggulan yang menghasilkan lulusan berakhlak mulia dan kompeten.</p>
+      <p><strong>Misi:</strong></p>
+      <ul>
+        <li>Meningkatkan kualitas pembelajaran berbasis teknologi.</li>
+        <li>Menanamkan nilai-nilai keislaman dalam kehidupan sehari-hari.</li>
+        <li>Menjalin kemitraan dengan dunia industri dan usaha.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="card">
+      <h2>Program Sekolah</h2>
+      <ul>
+        <li><strong>TJKT:</strong> Teknik Jaringan Komputer dan Telekomunikasi</li>
+        <li><strong>AKL:</strong> Akuntansi dan Keuangan Lembaga</li>
+        <li><strong>AP:</strong> Administrasi Perkantoran</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimoni">
+    <div class="card">
+      <h2>Testimoni Alumni</h2>
+      <p>"SMKS Islam Malahayati membentuk saya menjadi pribadi yang disiplin dan siap kerja. Terima kasih guru-guru hebat!" – <em>Rizky, Alumni TJKT</em></p>
+    </div>
+    <div class="card">
+      <p>"Saya diterima kerja langsung setelah lulus. Ilmu dan pengalaman di sekolah sangat membantu." – <em>Siti, Alumni AKL</em></p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="card">
+      <h2>Formulir Kontak</h2>
+      <form>
+        <input type="text" placeholder="Nama Anda" required />
+        <input type="email" placeholder="Email Anda" required />
+        <textarea rows="4" placeholder="Pesan Anda"></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
